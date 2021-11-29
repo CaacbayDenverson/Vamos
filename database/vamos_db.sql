@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2021 at 05:27 AM
+-- Generation Time: Nov 29, 2021 at 02:07 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -30,12 +30,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `inventory` (
   `id` int(100) NOT NULL,
-  `fullname` varchar(100) NOT NULL,
+  `items` varchar(100) NOT NULL,
+  `price` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reservation`
+--
+
+CREATE TABLE `reservation` (
+  `id` int(100) NOT NULL,
+  `full name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `contactnumber` int(30) NOT NULL,
-  `checkinout` date NOT NULL,
-  `numberofroom` int(30) NOT NULL,
-  `typeofroom` varchar(100) NOT NULL
+  `contactnumber` int(100) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `checkindate` date NOT NULL,
+  `nights` int(30) NOT NULL,
+  `room` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -68,6 +81,12 @@ ALTER TABLE `inventory`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -75,6 +94,12 @@ ALTER TABLE `inventory`
 -- AUTO_INCREMENT for table `inventory`
 --
 ALTER TABLE `inventory`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `reservation`
+--
+ALTER TABLE `reservation`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
