@@ -4,7 +4,7 @@
     box-sizing:border-box;
 }
 body{
-    background-image: url('main/bg.jpg');
+    background-image: url('../main/bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -198,4 +198,38 @@ opacity: 1;
 	border-radius:30px;
 	outline: none;
 }
-
+.logo img{
+    width:130px;
+    height:70px;
+  }
+.logo_teal{
+    width: 350px;
+    height: 200px;
+    margin-top: 120px;
+    margin-left: 40px;
+}
+.social__icon--link {
+    color: #fff;
+    font-size: 54px;
+  }
+  
+  .social__media {
+      float:right;
+      margin-right:20px;
+  }
+  
+  .social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+  }
+  
+  .social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+  }

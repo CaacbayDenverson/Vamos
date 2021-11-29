@@ -23,7 +23,6 @@ if ($num == 1) {
 	$_SESSION['username'] = $username;
 	echo '<script>
 		 window.location = "home.php";
-		 alert("Log-in successfully.");
 		 
  		 </script>';	
 }

@@ -9,12 +9,6 @@
         <link rel="stylesheet" href="css/btnstyle.css">
     </head>
 
-    <style>
-  .logo img{
-    width:130px;
-    height:50px;
-  }
-</style>
 
 
 <body>

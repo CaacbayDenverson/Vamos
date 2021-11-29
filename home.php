@@ -27,11 +27,9 @@ session_start();
 
 <body>
     <nav>
-    <div class="border">
-        <div class="logo">
-       <h4>VAMOS</h4>
-        </div>
-        </div>
+    <div class="logo">
+        <img src="main/logo.png">
+      </div>
         <ul class="nav-links">
                 <a class="nav-button" href="home.php">Home</a>
                 <a class="nav-button" href="rooms.php">Rooms</a>

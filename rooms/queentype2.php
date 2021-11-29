@@ -1,5 +1,5 @@
 <?php 
-include 'kingtype_db.php';
+include 'queentype_db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,18 +8,19 @@ include 'kingtype_db.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="form.css">
-        <title>Vamos | King Type</title>
+        <title>Vamos | Queen Type</title>
   </head>
+
   <body>
     <div class="testing">
     <br>
     <a class="button" href="../rooms.php">Back</a>
+    <a class="logo" href="#">Queen Type Room</a>
     </div>
-
     <div class="contact-form">
       <div class="row">
-        <h1>King Type Room </h1>
-        <img src="../main/1.jpg">
+        <h1>Queen Type 2</h1>
+        <img src="../main/6.jpg">
       </div>
         <form action="kingtype.php" method="post" enctype="multipart/form-data" >
           <div class="txtb">

@@ -13,12 +13,15 @@ include 'studiotype_db.php';
   <body>
     <div class="testing">
     <br>
-    <a class="button" href="../home.php">Back</a>
+    <a class="button" href="../rooms.php">Back</a>
     <a class="logo" href="#">Studio Type Room</a>
     </div>
     <div class="contact-form">
       <div class="row">
-        <form action="studiotype.php" method="post" enctype="multipart/form-data" >
+        <h1>Studio Type </h1>
+        <img src="../main/3.jpg">
+      </div>
+        <form action="kingtype.php" method="post" enctype="multipart/form-data" >
           <div class="txtb">
             <label><b>Enter Full Name :</b></label>
             <input type="text" style="color:#1EA1A1" name="fname"> <br>
@@ -52,9 +55,9 @@ include 'studiotype_db.php';
             </select>
         </div>
         
-          <button class="butt" type="submit" name="save">Reserve</button>
+          <button class="btn" type="submit" name="save">Proceed to Payment</button>
         </form>
-      </div>
+      
     </div>
   </body>
 </html>

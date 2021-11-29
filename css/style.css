@@ -43,14 +43,42 @@ nav{
  	transform: scaleX(1);
 	transform-origin: left;
 }
-/*
-.logo{
-    color:white;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
+
+.logo img{
+    width:130px;
+    height:70px;
+  }
+.logo_teal{
+    width: 350px;
+    height: 200px;
+    margin-top: 120px;
+    margin-left: 40px;
 }
-*/
+.social__icon--link {
+    color: #fff;
+    font-size: 54px;
+  }
+  
+  .social__media {
+      float:right;
+      margin-right:20px;
+  }
+  
+  .social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+  }
+  
+  .social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+  }
 
 .burger{
     display:none;
@@ -68,7 +96,7 @@ nav{
 .jam{
 	height:400px;
 	width:100%;
-    background-image: url('main/bg.jpg');;
+    background-image: url('../main/bg.jpg');;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

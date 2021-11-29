@@ -12,12 +12,15 @@ include 'doubledouble_db.php';
   <body>
     <div class="testing">
     <br>
-    <a class="button" href="../home.php">Back</a>
+    <a class="button" href="../rooms.php">Back</a>
     <a class="logo" href="#">Double Double Type Room</a>
     </div>
     <div class="contact-form">
       <div class="row">
-        <form action="doubledouble.php" method="post" enctype="multipart/form-data" >
+        <h1>Double Double Type </h1>
+        <img src="../main/5.jpg">
+      </div>
+        <form action="kingtype.php" method="post" enctype="multipart/form-data" >
           <div class="txtb">
             <label><b>Enter Full Name :</b></label>
             <input type="text" style="color:#1EA1A1" name="fname"> <br>
@@ -51,9 +54,9 @@ include 'doubledouble_db.php';
             </select>
         </div>
         
-          <button class="butt" type="submit" name="save">Reserve</button>
+          <button class="btn" type="submit" name="save">Proceed to Payment</button>
         </form>
-      </div>
+      
     </div>
   </body>
 </html>
