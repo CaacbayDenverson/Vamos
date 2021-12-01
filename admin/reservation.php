@@ -56,7 +56,7 @@ session_start();
                 <div class="card">
                     <center><h4><b>King Type</b></h4>
                     <div class="purchase">
-                        <a href="rooms/kingtype.php">CHECK INVENTORY</a>
+                        <a href="reservations/kingtype.php">CHECK INVENTORY</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ session_start();
                 <div class="card">
                     <center><h4><b>Queen Type</b></h4>
                     <div class="purchase">
-                        <a href="rooms/queentype.php">CHECK INVENTORY</a>
+                        <a href="reservations/queentype.php">CHECK INVENTORY</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@ session_start();
                 <div class="card">
                     <center><h4><b>Studio Type</b></h4>
                     <div class="purchase">
-                        <a href="rooms/studiotype.php">CHECK INVENTORY</a>
+                        <a href="reservations/studiotype.php">CHECK INVENTORY</a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ session_start();
                 <div class="card">
                     <center><h4><b>Double Type</b></h4>
                     <div class="purchase">
-                        <a href="rooms/doubletype.php">CHECK INVENTORY</a>
+                        <a href="reservations/doubletype.php">CHECK INVENTORY</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@ session_start();
                 <div class="card">
                     <center><h4><b>Double Double Type</b></h4>
                     <div class="purchase">
-                        <a href="rooms/doubletype.php">CHECK INVENTORY</a>
+                        <a href="reservations/doubletype.php">CHECK INVENTORY</a>
                     </div>
                 </div>
             </div>
