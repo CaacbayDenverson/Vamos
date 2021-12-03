@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
+  <title>Vamos | King Type</title>
   <link rel="stylesheet" href="style.css">
   
 </head>
@@ -15,6 +16,7 @@
     <th>Contact</th>
     <th>Email</th>
     <th>Nights</th>
+    <th>Room</th>
     <th>Payment</th>
   </tr>
 </table>

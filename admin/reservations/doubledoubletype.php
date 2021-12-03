@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
+  <title>Vamos | Double Double Type</title>
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -14,6 +15,7 @@
     <th>Contact</th>
     <th>Email</th>
     <th>Nights</th>
+    <th>Room</th>
     <th>Payment</th>
   </tr>
 </table>

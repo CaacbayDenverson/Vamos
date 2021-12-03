@@ -48,7 +48,23 @@ form{
     color:#1EA1A1;
     text-decoration: none;
 }
-
+input[type=submit], select, textarea {
+    padding: 13px 25px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    resize: vertical;
+    cursor: pointer;
+}
+.btn{
+    background-color: #1EA1A1;
+    text-decoration:none;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 .button {
     background-color: #1EA1A1;
     padding: 14px 28px;
@@ -131,4 +147,3 @@ form{
   .box select option {
     padding: 30px;
   }
-

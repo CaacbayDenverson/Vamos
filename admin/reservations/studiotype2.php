@@ -1,8 +1,8 @@
 <!DOCTYPE html> 
 <html>
 <head>
-  <title>Vamos | Queen Type</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Vamos | Studio Type 2</title>
+    <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
