@@ -1,11 +1,32 @@
 <?php
 
-session_start();
+if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+    // search in all table columns
+    // using concat mysql function
+    $query = "SELECT * FROM `reservation` WHERE CONCAT(`id`, `fullname`, `email`, `contactnumber`, `address`, `nights`, `room`, 'paid') LIKE '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+ else {
+    $query = "SELECT * FROM `reservation`";
+    $search_result = filterTable($query);
+}
+
+// function to connect and execute the query
+function filterTable($query)
+{
+    $connect = mysqli_connect("localhost", "root", "", "vamos_db");
+    $filter_Result = mysqli_query($connect, $query);
+    return $filter_Result;
+}
+
+
 
 
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,6 +53,46 @@ session_start();
     background-color: #333;
 }
 
+table, td, th {
+	text-align: center;
+    font-size:12px;
+    padding:15px;
+  }
+ table th{
+    background-color: #1EA1A1;
+    color: white;
+}
+ 
+table {
+    width: 93%;
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 3px #1EA1A1 solid;
+  }
+ table tr:nth-child(odd){
+    background-color: #ffffff;
+}
+table tr:nth-child(even){
+    background-color: #ffffff;
+}
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+.sub-btn{
+    margin-top: 20px;
+    margin-left: 3.5%;
+    width:80%;
+
+}
 </style>
 
 <body>
@@ -57,114 +118,54 @@ session_start();
   <div class="na">
     <h3>List Of Check In</h3>
   </div>
-  
-  <div class="imgko">
-      <center>
+  <form action="reservation.php" method="post">
+  <div class="sub-btn">
+                <input type="text" name="valueToSearch" placeholder="Search Rooom">
+                <input class="btn" type="submit" name="search" value="Search">
+            </div>
 
-      <div class="imgko">
-        <div class="lalagyan">
-            <div class="img1">
-                <div class="card">
-                    <center><h4><b>King Type</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/kingtype.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <?php require_once 'reservation_database.php'; ?>
+  <br>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Fullname</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>Address</th>
+    <th>Check In Date</th>
+    <th>Nights</th>
+    <th>Room</th>
+    <th>Payment</th>
+    <th colspan="1">Action</th>
+  </tr>
+  <?php while($row = mysqli_fetch_array($search_result)):?>
+                <?php 
+                    $mysqli = new mysqli('localhost', 'root', '', 'vamos_db');
+                    $result = $mysqli->query("SELECT * FROM reservation")
+                ?>
+                <tr>
+                    <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['fullname'];?></td>
+                    <td><?php echo $row['email'];?></td>
+                    <td><?php echo $row['contactnumber'];?></td>
+                    <td><?php echo $row['address'];?></td>
+                    <td><?php echo $row['checkindate'];?></td>
+                    <td><?php echo $row['nights'];?></td>
+                    <td><?php echo $row['room'];?></td>
+                    <td><?php echo $row['paid'];?></td>
+                    <td>
 
-    <div class="imgko">
-        <div class="lalagyan">
-            <div class="img1">
-                <div class="card">
-                    <center><h4><b>Queen Type</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/queentype.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
-    <div class="imgko">
-        <div class="lalagyan">
-            <div class="img1">
-                <div class="card">
-                    <center><h4><b>Studio Type</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/studiotype.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
-    <div class="imgko">
-        <div class="lalagyan">
-                <div class="card">
-                    <center><h4><b>Double Type</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/doubletype.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <a href="reservation.php?delete=<?php echo $row['id']; ?>"
+                        class="btn">Delete</a>
+                    </td>
+                </tr>
+                <?php endwhile;?>
+</table>
+</form>
 
-    <div class="imgko">
-        <div class="lalagyan">
-            <div class="img1">
-                <div class="card">
-                    <center><h4><b>Double Double Type</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/doubledoubletype.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-<!---->
-<div style="margin-left:10px">
-    <div class="imgko">
-        <div class="lalagyan">
-                <div class="card">
-                    <center><h4><b>Double Double Type 2</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/doubledoubletype2.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="imgko">
-        <div class="lalagyan">
-            <div class="img1">
-                <div class="card">
-                    <center><h4><b>Queen Type 2</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/queentype2.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="imgko">
-        <div class="lalagyan">
-            <div class="img1">
-                <div class="card">
-                    <center><h4><b>Studio Type 2</b></h4>
-                    <div class="purchase">
-                        <a href="reservations/studiotype2.php">CHECK INVENTORY</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
     <script src="app.js"></script>
 
     <script src="loginpopup.js"></script>

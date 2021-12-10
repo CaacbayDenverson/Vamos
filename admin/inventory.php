@@ -123,7 +123,7 @@ input[type=submit], select, textarea {
     <h3>Item Inventory</h3>
   </div>
 
-<?php require_once 'database.php'; ?>
+<?php require_once 'inventory_database.php'; ?>
     <form action="inventory.php" method="post">
             <div class="sub-btn">
                 <input type="text" name="valueToSearch" placeholder="Item to Search">
@@ -153,7 +153,7 @@ input[type=submit], select, textarea {
                     <td><?php echo $row['stock'];?></td>
                     <td>
 
-                        <a href="index.php?delete=<?php echo $row['id']; ?>"
+                        <a href="inventory.php?delete=<?php echo $row['id']; ?>"
                         class="btn">Delete</a>
                     </td>
                 </tr>

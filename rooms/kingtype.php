@@ -76,7 +76,8 @@
       </div>
       </td>
       <td colspan="2">
-      <form action="payment.php" enctype="multipart/form-data" >
+      <?php session_start(); ?>
+      <form action="create_reservation.php" method = "POST" enctype="multipart/form-data" >
         <div class="txtb">
             <label><b>Room Name :</b></label>
             <input type="text" style="color:#1EA1A1" id="room" name="room" value="King Type Room"> <br>
@@ -87,7 +88,7 @@
         </div>
           <div class="txtb">
             <label><b>Enter Full Name :</b></label>
-            <input type="text" style="color:#1EA1A1" id="fullname" name="fname"> <br>
+            <input type="text" style="color:#1EA1A1" id="fullname" name="fullname"> <br>
           </div>
           <div class="txtb">
             <label><b>Enter Email :</b></label>
@@ -95,7 +96,7 @@
         </div>
         <div class="txtb">
             <label><b>Enter Contact Number :</b></label>
-            <input type="text" style="color:#1EA1A1" id="contact" name="contact"> <br>
+            <input type="text" style="color:#1EA1A1" id="contact" name="contactnumber"> <br>
         </div>
         <div class="txtb">
             <label><b>Enter Address :</b></label>
@@ -104,7 +105,7 @@
         <div class="txtb">
           <label><b>Check In Date :</b></label>
           <br>
-            <input style="color:#1EA1A1" type="date" id="date" value="2021-12-15">
+            <input style="color:#1EA1A1" type="date" id="date" name="checkindate" value="2021-12-15">
         </div>
         <div class="txtb box">
           <label><b>How many Night ? :</b></label>

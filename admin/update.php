@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$db = mysqli_connect('localhost', 'root', '', 'istock');
+	$db = mysqli_connect('localhost', 'root', '', 'vamos_db');
 
 	// initialize variables
     $id = "";

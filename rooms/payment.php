@@ -7,100 +7,19 @@
         <title>Vamos | Payment</title>
         <link rel="stylesheet" href="payment.css">
     </head>
-<style>
-    *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-background: #f5f5f5;
-font-family:'Open Sans', sans-serif;
-}
-.logo{
-    padding:30px;
-    width:100%;
-    height: 100px;
-    background: #1EA1A1;
-    color: #ffffff;
-}
-
-.information{
-    margin-top:30px;
-    margin-left: 7%;
-    width:85%;
-    height: 220px;
-    background: #ffffff;
-    border: 2px #1EA1A1 solid;
-    border-radius: 10px;
-}
-
-.payment{
-    margin-top: 20px;
-    margin-left: 7%;
-    width:85%;
-    height: 300px;
-    background: #ffffff;
-    border: 2px #1EA1A1 solid;
-    border-radius: 10px;
-}
-
-table, td, th {
-	text-align: center;
-    font-size:12px;
-    padding:15px;
-  }
- table th{
-    background-color: #1EA1A1;
-    color: white;
-}
- 
-table {
-    width: 93%;
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    border: 3px #1EA1A1 solid;
-  }
- table tr:nth-child(odd){
-    background-color: #ffffff;
-}
-table tr:nth-child(even){
-    background-color: #ffffff;
-}
-
-.txtb{
-    margin-top: 70px;
-    margin-left: 50px;
-}
-
-.btn{
-    float:right;
-    margin-right:50px;
-    background-color: #1EA1A1;
-    text-decoration:none;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-</style>
-
 
 <body>
         <div class="logo">
-          <h1>Checkout</h1>
+          <h1>Payment</h1>
         </div>
 
 
     <div class="information">
         <h3>Contact Information</h3><br>
-        Fullname :<span id="fullname"></span> <br><br>
-        Email :<span id="email"></span> <br><br>
-        Contact Number :<span id="contactnumber"></span> <br><br>
-        Address :<span id="address"></span>
+        <b>Fullname &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <span id="fullname"></span> <br><br>
+        Email &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;          : <span id="email"></span> <br><br>
+        Contact Number : <span id="contactnumber"></span> <br><br>
+        Address   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;    : <span id="address"></span></b>
     </div>
 
     <div class="payment">
@@ -122,19 +41,47 @@ table tr:nth-child(even){
             </tr>
         </table>
 
-        <div class="txtb">
+        <div class="txtb box">
           <label><b>Select Payment Method</b></label>
           <br>
             <select name="Select" id="payment">
               <option value="1">Gcash</option>
-              <option value="2">Credit / Debit</option>
-              <option value="3"></option>
+              <option value="2">Paymaya</option>
+              <option value="3">BDO</option>
             </select>
-
-            <button class="btn">RESERVED</button>
-        </div>
+<!--payment button-->
+        <div class="form-box">
+            <div class="open-btn">
+                <button class="open-button" onclick="addForm()">
+                    <strong>PAY NOW</strong>
+                </button>
+            </div>
+               <div id="addPopup">
+                 <div class="form-popup" id="popupForm">
+                   <form action="update_payment.php" method = "post" class="form-container">
+                     <h2>Payment</h2><br>
+                     <label for="fullname">
+                     <strong>Full Name : </strong>
+                     </label>
+                     <span id="fullname1"></span><br><br>
+                     <label for="number">
+                     <strong>Number</strong>
+                     </label>
+                     <input type="text" id="number" placeholder="" name="number" required>
+                     <label for="password">
+                     <strong>Password</strong>
+                     </label>
+                     <input type="password" id="psw" placeholder="" name="password" required>
+                     <button type="submit" class="btn">Pay Now</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">Back</button>
+                   </form>
+                 </div>
+               </div>
+            </div>
+            
         </div>
     </div>
+</div>
 
 
 
@@ -143,6 +90,7 @@ table tr:nth-child(even){
 
     <script>
     document.getElementById("fullname").innerHTML=localStorage.getItem("textvalue");
+    document.getElementById("fullname1").innerHTML=localStorage.getItem("textvalue");
     document.getElementById("email").innerHTML=localStorage.getItem("textvalue2");
     document.getElementById("contactnumber").innerHTML=localStorage.getItem("textvalue3");
     document.getElementById("address").innerHTML=localStorage.getItem("textvalue4");
@@ -152,7 +100,7 @@ table tr:nth-child(even){
     document.getElementById("room").innerHTML=localStorage.getItem("textvalue8");
     document.getElementById("subtotal").innerHTML=localStorage.getItem("textvalue9");
     </script>
-    <script src="../js/app.js"></scrip>
+    <script src="../js/app.js"></script>
     <script src="../js/loginpopup.js"></script>
 </body>
 </html>
