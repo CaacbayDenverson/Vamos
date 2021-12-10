@@ -69,6 +69,23 @@ table {
 table tr:nth-child(even){
     background-color: #ffffff;
 }
+
+.txtb{
+    margin-top: 70px;
+    margin-left: 50px;
+}
+
+.btn{
+    float:right;
+    margin-right:50px;
+    background-color: #1EA1A1;
+    text-decoration:none;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 </style>
 
 
@@ -91,21 +108,30 @@ table tr:nth-child(even){
         <table>
             <tr>
                 <th>Room</th>
+                <th>Nights</th>
+                <th>Date</th>
                 <th>Price</th>
-                <th>Nights</th>
-                <th>Email</th>
-                <th>Nights</th>
                 <th>Sub Total</th>
             </tr>
+            <tr>
+                <td><span id="room"></span></td>
+                <td><span id="nights"></span></td>
+                <td><span id="checkindate"></span></td>
+                <td><span id="price"></span></td>
+                <td><span id="subtotal"></span></td>
+            </tr>
         </table>
-        <div class="txtb box">
+
+        <div class="txtb">
           <label><b>Select Payment Method</b></label>
           <br>
             <select name="Select" id="payment">
-              <option value="">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
+              <option value="1">Gcash</option>
+              <option value="2">Credit / Debit</option>
+              <option value="3"></option>
             </select>
+
+            <button class="btn">RESERVED</button>
         </div>
         </div>
     </div>
@@ -116,14 +142,15 @@ table tr:nth-child(even){
 
 
     <script>
-    document.getElementById("fullname").innerHTML=localStorage.getItem("fullname");
-    document.getElementById("email").innerHTML=localStorage.getItem("email");
-    document.getElementById("contactnumber").innerHTML=localStorage.getItem("contactnumber");
-    document.getElementById("address").innerHTML=localStorage.getItem("address");
-    document.getElementById("checkindate").innerHTML=localStorage.getItem("checkindate");
-    document.getElementById("nights").innerHTML=localStorage.getItem("nights");
-    document.getElementById("cost").innerHTML=localStorage.getItem("cost");
-    document.getElementById("room").innerHTML=localStorage.getItem("room");
+    document.getElementById("fullname").innerHTML=localStorage.getItem("textvalue");
+    document.getElementById("email").innerHTML=localStorage.getItem("textvalue2");
+    document.getElementById("contactnumber").innerHTML=localStorage.getItem("textvalue3");
+    document.getElementById("address").innerHTML=localStorage.getItem("textvalue4");
+    document.getElementById("checkindate").innerHTML=localStorage.getItem("textvalue5");
+    document.getElementById("nights").innerHTML=localStorage.getItem("textvalue6");
+    document.getElementById("price").innerHTML=localStorage.getItem("textvalue7");
+    document.getElementById("room").innerHTML=localStorage.getItem("textvalue8");
+    document.getElementById("subtotal").innerHTML=localStorage.getItem("textvalue9");
     </script>
     <script src="../js/app.js"></scrip>
     <script src="../js/loginpopup.js"></script>

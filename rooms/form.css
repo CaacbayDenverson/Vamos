@@ -1,25 +1,15 @@
-body{
-    background:white;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    background-size: cover;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.contact-form{
-    width: 100%;
+body{
+    background:white;
+    font-family:'Open Sans', sans-serif;
 }
 .row{
-    float: left;
-    margin-left: 40px;
-    width: 49%;
-}
-.row h1{
-    color: black;
-    font-family: Helvetica, Arial, Sans-Serif;
-    font-size : 28px;
-    color:#1EA1A1;
+    width: 100%;
+    margin-left: 10px;
 }
 .row img{
     width:700px;
@@ -27,16 +17,16 @@ body{
     border-radius:10px;
 }
 form{
-    float: right;
-    margin-right: 40px;
-    width: 50%;
-    max-width: 600px;
+    width: 95%;
     background:white;
-    padding: 30px 40px;
     box-sizing: border-box;
     border-radius: 8px;
     border: 2px #1EA1A1 solid;
     text-align: center;
+    margin-top:12px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right:20px;
     font-family: "Monserrat" , sans-serif;
 
 }
@@ -66,10 +56,10 @@ input[type=submit], select, textarea {
     cursor: pointer;
 }
 .button {
-    background-color: #1EA1A1;
-    padding: 14px 28px;
-    border-radius: 11px;
-    color: white;
+    background-color: #ffffff;
+    padding: 8px 28px;
+    border-radius: 7px;
+    color: #1EA1A1;
     font-size: 18px;
     font-family: Helvetica, Arial, Sans-Serif;
     text-decoration: none;
@@ -78,7 +68,7 @@ input[type=submit], select, textarea {
 
 
 .testing{
-    height: 100px;
+    height: 0px;
 }
 
 .txtb{
@@ -147,3 +137,27 @@ input[type=submit], select, textarea {
   .box select option {
     padding: 30px;
   }
+
+
+
+/*New Layout Design for reservation*/
+.table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+table th{
+    background-color: #1EA1A1;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: start;
+}
+.table th h5{
+    color: #1EA1A1;
+    text-align: start;
+    font-size: 20px;
+}
+.table td, th{
+    width:50%;
+}
