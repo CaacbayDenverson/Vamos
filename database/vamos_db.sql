@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2021 at 02:07 PM
+-- Generation Time: Dec 13, 2021 at 04:04 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -29,9 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `inventory` (
-  `id` int(100) NOT NULL,
-  `items` varchar(100) NOT NULL,
-  `price` int(100) NOT NULL
+  `id` int(64) NOT NULL,
+  `item` varchar(100) NOT NULL,
+  `price` int(64) NOT NULL,
+  `stock` int(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -42,13 +43,14 @@ CREATE TABLE `inventory` (
 
 CREATE TABLE `reservation` (
   `id` int(100) NOT NULL,
-  `full name` varchar(100) NOT NULL,
+  `fullname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `contactnumber` int(100) NOT NULL,
   `address` varchar(30) NOT NULL,
   `checkindate` date NOT NULL,
   `nights` int(30) NOT NULL,
-  `room` varchar(100) NOT NULL
+  `room` varchar(100) NOT NULL,
+  `paid` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -68,7 +70,18 @@ CREATE TABLE `signup_tb` (
 
 INSERT INTO `signup_tb` (`username`, `password`) VALUES
 ('admin', 'admin123'),
-('denver', 'denverkun');
+('denver', 'denverkun'),
+('julien', 'julien123'),
+('45454545', '5454'),
+('margarette', 'margarette123'),
+('berna', 'berna123'),
+('berna', 'berna123'),
+('analyn', 'analyn123'),
+('melmark', 'melmark123'),
+('melmark', 'melmark123'),
+('melmark', 'melmark123'),
+('paul', 'paul123'),
+('jhom', 'jhom123');
 
 --
 -- Indexes for dumped tables
@@ -94,7 +107,7 @@ ALTER TABLE `reservation`
 -- AUTO_INCREMENT for table `inventory`
 --
 ALTER TABLE `inventory`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(64) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `reservation`

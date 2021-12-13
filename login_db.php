@@ -46,7 +46,6 @@ if (mysqli_num_rows($result) == 1) { // user found
 else if ($num == 0) {
 	echo '<script>
 		 window.location = "index.php";
-		 alert("Incorrect email and/or password.");
 		 
 		  </script>';
 }

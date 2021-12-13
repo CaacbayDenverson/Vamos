@@ -34,22 +34,3 @@ else {
 	
 	 </script>';	
 }
-
-
-// header("refresh:2; url=tarpaulin.php");
-
-
-?>
-
-<!-- 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<br><br>
-	<center><button onclick = "window.location.href = 'login.php';">Log-in?</button></center>
-</body>
-</html>
--->

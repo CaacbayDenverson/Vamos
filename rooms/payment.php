@@ -42,13 +42,6 @@
         </table>
 
         <div class="txtb box">
-          <label><b>Select Payment Method</b></label>
-          <br>
-            <select name="Select" id="payment">
-              <option value="1">Gcash</option>
-              <option value="2">Paymaya</option>
-              <option value="3">BDO</option>
-            </select>
 <!--payment button-->
         <div class="form-box">
             <div class="open-btn">
@@ -58,20 +51,16 @@
             </div>
                <div id="addPopup">
                  <div class="form-popup" id="popupForm">
-                   <form action="update_payment.php" method = "post" class="form-container">
+                   <form action="update_payment.php" method = "POST" class="form-container">
                      <h2>Payment</h2><br>
-                     <label for="fullname">
-                     <strong>Full Name : </strong>
+                     <label for="payment">
+                     <strong>Enter Name :</strong>
                      </label>
-                     <span id="fullname1"></span><br><br>
-                     <label for="number">
-                     <strong>Number</strong>
+                     <input type="text" id="fullname" placeholder="" name="fullname" required>
+                     <label for="payment">
+                     <strong>Enter Amount :</strong>
                      </label>
-                     <input type="text" id="number" placeholder="" name="number" required>
-                     <label for="password">
-                     <strong>Password</strong>
-                     </label>
-                     <input type="password" id="psw" placeholder="" name="password" required>
+                     <input type="text" id="payment" placeholder="" name="payment" required>
                      <button type="submit" class="btn">Pay Now</button>
                      <button type="button" class="btn cancel" onclick="closeForm()">Back</button>
                    </form>
@@ -90,7 +79,6 @@
 
     <script>
     document.getElementById("fullname").innerHTML=localStorage.getItem("textvalue");
-    document.getElementById("fullname1").innerHTML=localStorage.getItem("textvalue");
     document.getElementById("email").innerHTML=localStorage.getItem("textvalue2");
     document.getElementById("contactnumber").innerHTML=localStorage.getItem("textvalue3");
     document.getElementById("address").innerHTML=localStorage.getItem("textvalue4");

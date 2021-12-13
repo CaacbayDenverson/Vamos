@@ -35,7 +35,6 @@ if(!mysqli_query($con, $sql))
 else {
 	echo '<script>
 	window.location = "payment.php";
-	alert("Reserved Successfully.");
 	
 	 </script>';	
 }

@@ -72,7 +72,8 @@
         <div class="row">
         <img src="../main/6.jpg">
         <br><br>
-        <h3>Our king size bedded also provides views over landscaped buildings. It has ample storage, a seating area, digital safe and mini fridge.</h3>
+        <h3>A queen type with an extra large bed which can accomodate by 1 to 3 people. It has a two single 
+bed and a mini table and kitchenette.</h3>
       </div>
       </td>
       <td colspan="2">

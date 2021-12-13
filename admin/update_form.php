@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Vamos | Update Item</title>
-    <link rel="stylesheet" type="text/css" href="reservations/style.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
 </head>
 
 <body>
 <div class="testing">
     <br>
-    <a class="back" href="inventory.php">Back</a>
+    
     <center><h3 class="logo" href="#">UPDATE PRODUCT</h3></center>
     </div>
 
@@ -17,14 +17,16 @@
         <form action="update_form.php" method = "post" class="container">
 			<input type="text" name="id" placeholder="Item ID Number" >
             <input type="text" name="update" placeholder="Update data" >
-
-            <select name="choice">
+            <div class="box">
+                <select name="choice">
                     <option value="">Select</option>
                     <option value="price">Price</option>
                     <option value="stock">Stock</option>
                 </select><br><br>
+            </div>
 
             <input type="submit" value="Update Item">
+            <a class="btn" href="inventory.php">Back</a>
         </form>
     </div>
 

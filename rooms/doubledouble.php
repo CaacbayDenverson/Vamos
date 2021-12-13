@@ -72,7 +72,8 @@
         <div class="row">
         <img src="../main/5.jpg">
         <br><br>
-        <h3>Our king size bedded also provides views over landscaped buildings. It has ample storage, a seating area, digital safe and mini fridge.</h3>
+        <h3>A double double type is a room with two beds. It may be occupied by one to two person. It has a 
+table and a TV.</h3>
       </div>
       </td>
       <td colspan="2">

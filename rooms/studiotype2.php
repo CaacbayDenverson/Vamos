@@ -72,7 +72,9 @@
         <div class="row">
         <img src="../main/8.jpg">
         <br><br>
-        <h3>Our king size bedded also provides views over landscaped buildings. It has ample storage, a seating area, digital safe and mini fridge.</h3>
+        <h3>A room with a studio bed with a couch which can be converted into a bed. May also have an 
+additional bed. It may also have a small kitchenette with a refrigerator, a stove, and some basic 
+kitchen tool.</h3>
       </div>
       </td>
       <td colspan="2">

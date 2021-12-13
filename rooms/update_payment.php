@@ -1,27 +1,34 @@
-<?php 
-	session_start();
-	$db = mysqli_connect('localhost', 'root', '', 'vamos_db');
+<?php
+session_start();
 
-	// initialize variables
-    $fullname = "";
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullname = $_POST['fullname'];
+// Database connection
+$con = mysqli_connect('localhost','root','');
 
 
-    mysqli_query($db, "UPDATE reservation SET $paid = '".$new."' WHERE id = '".$id."'");
-    echo '<script>
-	window.location = "../room.php";
-	alert("Payment Successfully");
-	
-	 </script>';
+if(!$con)
+{
+	echo 'Not connected to the server.';
 }
-else{
-    echo '<script>
-	window.location = "payment.php";
-	alert("Payment Failed");
-	
-	 </script>';
+
+if(!mysqli_select_db($con, 'vamos_db'))
+{
+	echo 'Database not selected.';
 }
-?>
+
+$fullname = $_POST['fullname'];
+$paid = $_POST['payment'];
+
+	$sql = "UPDATE reservation SET paid = 'PAID' WHERE fullname ='$fullname'";
+
+	if(!mysqli_query($con, $sql))
+	{
+		echo 'Not inserted.';
+	}
+	
+	else {
+		echo '<script>
+		window.location = "../rooms.php";
+		alert("Reserved Successfully.");
+		</script>';	
+	}
+?>	
